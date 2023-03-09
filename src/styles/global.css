@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+}
+/*--- LOGO ----*/
+.logo {
+  width: 150px;
+  margin-bottom: 10px;
+  justify-self: center;
+  padding-top: 1rem;
+}
+@media (max-width: 640px) {
+	.logo {
+		display: block;
+	}
+}
+/*--- TITLE ----*/
+.title {
+	font-size: var(--lg);
+	margin-bottom: 36px;
+	text-align: start;
+}

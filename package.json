@@ -23,8 +23,11 @@
   },
   "homepage": "https://github.com/Ejmz216/elmer-dev-site#readme",
   "dependencies": {
+    "axios": "^1.3.3",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.7.1",
+    "react-router-dom": "^6.8.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
@@ -35,7 +38,7 @@
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.7.2",
-    "sass": "^1.57.1",
+    "sass": "^1.58.0",
     "sass-loader": "^13.2.0",
     "style-loader": "^3.3.1",
     "webpack": "^5.75.0",

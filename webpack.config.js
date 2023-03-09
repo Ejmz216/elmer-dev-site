@@ -7,10 +7,19 @@ module.exports = {
     entry: './src/index.js', // punto de entrada
     output: { // lugar al que saldrán todos los archivos
         path: path.resolve(__dirname, 'dist'), //en nuestro path, crea la carpeta dist
-        filename: 'bundle.js' // nombre del archivo js resultante
+        filename: 'bundle.js', // nombre del archivo js resultante
+        publicPath: '/',
     },
     resolve: { // extensión de archivos a tomar en cuenta
-        extensions: ['.js', '.jsx']
+        extensions: ['.js', '.jsx'],
+        alias: {
+            '@components': path.resolve(__dirname, 'src/components/'),
+            '@containers': path.resolve(__dirname, 'src/containers/'),
+            '@pages': path.resolve(__dirname, 'src/pages/'),
+            '@styles': path.resolve(__dirname, 'src/styles/'),
+            '@icons': path.resolve(__dirname, 'src/assets/icons/'),
+            '@logos': path.resolve(__dirname, 'src/assets/logos/'),
+        }
     },
     mode: 'development',
     module: { // loaders para cada tipo de archivo
@@ -31,14 +40,17 @@ module.exports = {
                 ]
             },
             {
-                test: /\.s[ac]ss$/i,
+                test: /\.(css|scss)$/,
                 use: [
                     "style-loader",
                     "css-loader",
                     "sass-loader"
                 ]
+            },
+            {
+                test: /\.(png|svg|jpg|gif)$/,
+                type: 'asset'
             }
-
         ]
     },
     plugins: [ // plugins 
@@ -50,4 +62,7 @@ module.exports = {
             filename: '[name].css'
         })
     ],
+    devServer: {
+        historyApiFallback: true,
+    }
 }
