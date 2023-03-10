@@ -1,14 +1,24 @@
 @use 'vars';
 
 .Menu {
-	width: 100px;
+	width: 160px;
 	height: auto;
 	border: 1px solid var(--very-light-pink);
 	border-radius: 6px;
 	padding: 20px 20px 0 20px;
-	position: absolute;
 	top: 4rem;
 	right: 2rem;
+	background-color: white;
+	animation: swLeft 0.2s ease;
+}
+@keyframes swLeft {
+	0% {
+		width: 0;
+	}
+
+	100% {
+		width: 100px;
+	}
 }
 
 .Menu ul {
@@ -32,7 +42,7 @@
 }
 
 .Menu ul li:last-child a {
-	color: var(--hospital-green);
+	color: var(--light-blue);
 	font-size: var(--sm);
 }
 

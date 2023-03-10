@@ -1,17 +1,9 @@
 @use 'vars';
 
 nav {
-	/* position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 9999;
-    transition: 0.32s ease-in-out;
-    background: var(--white); */
-
 	display: flex;
 	justify-content: space-between;
 	padding: 0 24px;
-	border-bottom: 1px solid var(--very-light-pink);
 	width: calc(100% - 48px);
 	top: 0;
 	position: fixed;
@@ -22,6 +14,13 @@ nav {
 	display: none;
 }
 
+.container-menu {
+	display: flex;
+	flex-direction: row;
+	position: absolute;
+	top: 60px;
+	right: 0;
+}
 
 svg {
 	width: 2rem;
@@ -50,11 +49,8 @@ svg {
 .navbar-left ul li a,
 .navbar-right ul li a {
 	text-decoration: none;
-	background: -webkit-linear-gradient(#00d4ff, #090979);
-	background-clip: inherit;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	font-weight: 900;
+	color: black;
+	font-weight: 500;
 	border: 1px solid var(--white);
 	padding: 8px;
 	margin-left: 5px;
@@ -62,17 +58,19 @@ svg {
 
 .navbar-left ul li a:hover,
 .navbar-right ul li a:hover {
-	border: 1px solid var(--dark-blue);
+	border: 1px solid var(--very-light-pink);
 	color: var(--dark-blue);
 }
 
 .navbar-email {
-	background: -webkit-linear-gradient(#00d4ff, #090979);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+	color: black;
 	font-size: var(--sm);
 	margin-right: 12px;
 	cursor: pointer;
+}
+
+.navbar-email:hover {
+	color: var(--light-blue);
 }
 
 .navbar-shopping-cart {
@@ -103,6 +101,7 @@ svg {
 @media (max-width: 640px) {
 	.menu {
 		display: block;
+		margin-top: 16px;
 	}
 
 	.navbar-left ul {

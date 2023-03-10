@@ -17,7 +17,7 @@
 	flex-direction: column;
 }
 .form a {
-	color: var(--hospital-green);
+	color: var(--light-blue);
 	font-size: var(--sm);
 	text-align: center;
 	text-decoration: none;
@@ -41,7 +41,7 @@
 	margin-bottom: 22px;
 }
 .primary-button {
-	background-color: var(--hospital-green);
+	background-color: var(--light-blue);
 	border-radius: 8px;
 	border: none;
 	color: var(--white);
@@ -54,8 +54,8 @@
 .secondary-button {
 	background-color: var(--white);
 	border-radius: 8px;
-	border: 1px solid var(--hospital-green);
-	color: var(--hospital-green);
+	border: 1px solid var(--light-blue);
+	color: var(--light-blue);
 	width: 100%;
 	cursor: pointer;
 	font-size: var(--md);

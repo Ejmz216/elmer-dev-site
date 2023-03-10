@@ -2,32 +2,45 @@
 
 .MyOrder {
 	width: 360px;
-	overflow-y: auto;
 	padding: 24px;
-	box-sizing: border-box;
-	position: absolute;
-	right: 0;
-	background-color: white;
 	top: 60px;
+	right: 0;
+	max-height: 90vh;
+	position: fixed;
+	box-sizing: border-box;
+	background-color: white;
 	bottom: auto;
 	border-radius: 6px;
 	border: 1px solid var(--very-light-pink);
 	animation: swipeLeft 0.26s ease;
+	overflow-y: auto;
+	z-index: 10000;
 }
 
-@keyframes swipeLeft {
-	0% {
-		width: 0;
-	}
+.cart-product-list {
+	max-height: calc(100vh - 340px);
+	overflow-y: auto;
 
-	100% {
-		width: 360px;
-	}
 }
+
+.cart-product-list::-webkit-scrollbar {
+	display: none;
+}
+
+
+.arrowBack {
+	font-size: 20px;
+	cursor: pointer;
+}
+
+.arrowBack:hover {
+	color: var(--light-blue);
+}
+
 
 .title-container {
 	display: flex;
-	align-items:  center;
+	align-items: center;
 }
 
 .title-container img {
@@ -35,9 +48,6 @@
 	margin-right: 14px;
 }
 
-.title {
-	font-weight: bold;
-}
 
 .order {
 	display: grid;
@@ -66,15 +76,27 @@
 }
 
 .primary-button {
-	background-color: var(--hospital-green);
+	background-color: var(--light-blue);
 	border-radius: 8px;
 	border: none;
-	color: var(--white);
+	font-family: 'Poppins', sans-serif;
+	color: black !important;
 	width: 100%;
 	cursor: pointer;
 	font-size: var(--md);
 	font-weight: bold;
 	height: 50px;
+}
+
+
+@keyframes swipeLeft {
+	0% {
+		width: 0;
+	}
+
+	100% {
+		width: 360px;
+	}
 }
 
 @media (max-width: 640px) {

@@ -1,30 +1,34 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useRef } from 'react';
 import '../styles/Header.scss';
 import Menu from '../components/Menu.jsx';
+import MenuMobile from '@containers/MenuMobile'
 import AppContext from '../context/AppContext.js'
 import MyOrder from '../containers/MyOrder';
+import MainLogo from '../assets/logos/MainLogo.png';
 
-import { IconContext } from "react-icons";
-import { AiOutlineShoppingCart, AiOutlineMenu } from 'react-icons/ai';
-import { BsShop } from 'react-icons/bs';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { AiOutlineShoppingCart } from 'react-icons/ai';
 
 const Header = () => {
 	const [toggle, setToggle] = useState(false);
 	const [toggleOrders, setToggleOrders] = useState(false);
+	const [toggleMobile, setToggleMobile] = useState(false);
+
 	const { state } = useContext(AppContext);
 
 	const handleToggle = () => {
 		setToggle(!toggle);
 	}
+
+	const handleClickMobile = () => {
+		setToggleMobile(!toggleMobile);
+	}
 	return (
 		<nav>
-			<IconContext.Provider value={{ className: "menu" }}>
-				<AiOutlineMenu />
-			</IconContext.Provider>
+			<FontAwesomeIcon icon={faBars} className="menu" onClick={handleClickMobile} />
 			<div className="navbar-left">
-				<IconContext.Provider value={{ className: "logo" }}>
-					<BsShop />
-				</IconContext.Provider>
+				<img src={MainLogo} className="logo" />
 				<ul>
 					<li>
 						<a href="/">All</a>
@@ -57,9 +61,12 @@ const Header = () => {
 					</li>
 				</ul>
 			</div>
-			{toggle && <Menu />}
-			{toggleOrders && <MyOrder />}
-		</nav>
+			<div className="container-menu">
+				{toggle && <Menu />}
+				{toggleMobile && <MenuMobile />}
+				{toggleOrders && <MyOrder toggleOrders={toggleOrders} setToggleOrders={setToggleOrders} />}
+			</div>
+		</nav >
 	);
 }
 

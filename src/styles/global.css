@@ -1,22 +1,50 @@
 body {
   margin: 0;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
+
 /*--- LOGO ----*/
 .logo {
-  width: 150px;
+  width: 140px;
+  height: 30px;
   margin-bottom: 10px;
+  margin-right: 10px;
   justify-self: center;
   padding-top: 1rem;
+
 }
-@media (max-width: 640px) {
-	.logo {
-		display: block;
-	}
+
+.secondary-button {
+  background-color: var(--light-blue);
+  border-radius: 8px;
+  border: 1px solid var(--light-blue);
+  color: var(--light-blue);
+  width: 100%;
+  cursor: pointer;
+  font-size: var(--md);
+  font-weight: bold;
+  height: 50px;
 }
-/*--- TITLE ----*/
+
+
+.login-button {
+  margin-top: 14px;
+  margin-bottom: 30px;
+  font-family: 'Poppins', sans-serif;
+  color: black !important;
+}
+
+
 .title {
-	font-size: var(--lg);
-	margin-bottom: 36px;
-	text-align: start;
+  font-size: var(--lg);
+  margin-bottom: 30px;
+  text-align: start;
+  font-weight: bold;
+}
+
+/*--- QUERY ----*/
+@media (max-width: 640px) {
+  .logo {
+    display: block;
+  }
 }

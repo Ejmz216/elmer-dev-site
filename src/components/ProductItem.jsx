@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
 import '@styles/ProductItem.scss';
 import AppContext from '../context/AppContext.js';
-import addToCartImage from '../assets/icons/bt_add_to_cart.svg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
 
 
 const ProductItem = ({ product }) => {
@@ -20,7 +21,7 @@ const ProductItem = ({ product }) => {
 					<p>{product.title}</p>
 				</div>
 				<figure onClick={() => handleClick(product)}>
-					<img src={addToCartImage} alt="" />
+				<FontAwesomeIcon icon={faCartPlus} className="addToCart" alt="" />
 				</figure>
 			</div>
 		</div >
