@@ -1,7 +1,7 @@
 {
-  "name": "elmer-dev-site",
+  "name": "virtual-shop-site",
   "version": "1.0.0",
-  "description": "react portfolio",
+  "description": "react practice 3",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -23,7 +23,6 @@
   "bugs": {
     "url": "https://github.com/Ejmz216/virtual-shop-site/issues"
   },
-  "homepage": "https://ejmz216.github.io/virtual-shop-site",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.3.0",
     "@fortawesome/free-regular-svg-icons": "^6.3.0",
@@ -51,5 +50,6 @@
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^4.11.1"
-  }
+  },
+  "homepage": "https://Ejmz216.github.io/virtual-shop-site"
 }
