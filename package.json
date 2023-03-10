@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -21,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/Ejmz216/elmer-dev-site/issues"
   },
-  "homepage": "https://github.com/Ejmz216/elmer-dev-site#readme",
+  "homepage": "/https://ejmz216.github.io",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.3.0",
     "@fortawesome/free-regular-svg-icons": "^6.3.0",
@@ -39,6 +41,7 @@
     "@babel/preset-react": "^7.18.6",
     "babel-loader": "^9.1.2",
     "css-loader": "^6.7.3",
+    "gh-pages": "^5.0.0",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.7.2",
