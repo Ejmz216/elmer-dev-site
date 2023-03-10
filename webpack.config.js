@@ -7,8 +7,8 @@ module.exports = {
     entry: './src/index.js', // punto de entrada
     output: { // lugar al que saldrán todos los archivos
         path: path.resolve(__dirname, 'dist'), //en nuestro path, crea la carpeta dist
-        filename: 'bundle.js', // nombre del archivo js resultante
-        publicPath: '/',
+        filename: 'virtual-shop-site/bundle.js', // nombre del archivo js resultante
+        publicPath: '/virtual-shop-site/',
     },
     resolve: { // extensión de archivos a tomar en cuenta
         extensions: ['.js', '.jsx'],
