@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Ejmz216/vitual-shop-site.git"
+    "url": "https://github.com/Ejmz216/virtual-shop-site"
   },
   "keywords": [
     "rect",
@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/Ejmz216/virtual-shop-site/issues"
   },
-  "homepage": "/https://ejmz216.github.io/vitual-shop-site",
+  "homepage": "https://ejmz216.github.io/virtual-shop-site",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.3.0",
     "@fortawesome/free-regular-svg-icons": "^6.3.0",
