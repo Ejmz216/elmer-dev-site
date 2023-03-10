@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "description": "react practice 3",
   "main": "src/index.js",
+  "homepage": "https://Ejmz216.github.io/virtual-shop-site/",
+
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack serve --open",
+    "start": "webpack serve",
     "build": "webpack --mode production",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -b master -d dist"
   },
   "repository": {
     "type": "git",
@@ -50,6 +52,5 @@
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^4.11.1"
-  },
-  "homepage": "https://Ejmz216.github.io/virtual-shop-site"
+  }
 }
